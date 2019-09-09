@@ -29,7 +29,7 @@ app.post('/', (req, res) => {
 		quantity: req.body.quantity
 	})
 	.then(function(widget){
-		res.redirect('home')
+		res.redirect('/')
 	})
 	.catch(error => {
 		if(error){
@@ -44,7 +44,7 @@ app.delete('/:id', (req, res) => {
 		where : { id: req.params.id }
 	})
 	.then(() => {
-		res.redirect('home')
+		res.redirect('/')
 	})
 	.catch(error => {
 		if(error){
