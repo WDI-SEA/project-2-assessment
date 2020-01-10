@@ -17,10 +17,36 @@ app.get('/', (req, res) => {
     })
     .catch( err => {
         console.log(error)
-        res.send('There was an error. Try something else.')
+        res.send('There was an error getting all widgets and rendering the home page.')
     })
 })
 
+app.post('/', (req, res) => {
+    db.widget.create({
+        description: req.body.description,
+        quantity: req.body.quantity
+    })
+    .then( widget => {
+        res.redirect('/')
+    })
+    .catch( err => {
+        console.log(error)
+        res.send('There was an error creating a widget and redirecting to the home page.')
+    })
+})
+
+app.delete('/', (req, res) => {
+    db.widget.destroy({
+        where: { id: req.body.id }
+    })
+    .then( () => {
+        res.redirect('/')
+    })
+    .catch( err => {
+        console.log(error)
+        res.send('There was an error deleting a widget and redirecting to the home page.')
+    })
+})
 
 // YOUR ROUTES ABOVE THIS COMMENT /////////////
 
