@@ -26,7 +26,7 @@ You will need to install these after cloning down your fork using `npm i`.
 
 ### Step 3: Implement the App
 
-[See assessment prompt for detailed instructions](https://github.com/WDI-SEA/wdi_assessments/blob/master/project_assessments/project-2-assessment.md).
+[See assessment prompt for detailed instructions](https://github.com/WDI-SEA/wdi_assessments/blob/master/project_assessments/project2_remote_self_assessment.md).
 
 ### Step 4: Deploy and Turn-in
 
